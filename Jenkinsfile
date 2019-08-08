@@ -17,6 +17,12 @@ metadata:
 labels:
   component: ci
 spec:
+  dockerRegistries:
+  - name: gcr
+    address: https://gcr.io
+    username: _json_key
+    password: '$SA_JSON'
+    email: rajeshgn1987@gmail.com 
   # Use service account that can deploy to all namespaces
   serviceAccountName: cd-jenkins
   containers:
