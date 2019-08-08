@@ -18,7 +18,7 @@ labels:
   component: ci
 spec:
   # Use service account that can deploy to all namespaces
-  serviceAccountName: sa-cont-reg
+  serviceAccountName: cd-jenkins
   containers:
   - name: python
     image: python:latest
