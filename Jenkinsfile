@@ -1,7 +1,9 @@
 def project = 'jenk-spina-demo'
 def  appName = 'gke-test'
 def  feSvcName = "${appName}-frontend"
-def  imageTag = "gcr.io/${project}/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
+def  imageTag = "gcr.io/cicd-spinakker/hello-la:${env.BUILD_NUMBER}"
+
+//gcr.io/cicd-spinakker/hello-la:latest
 
 pipeline {
   agent {
@@ -16,7 +18,7 @@ labels:
   component: ci
 spec:
   # Use service account that can deploy to all namespaces
-  serviceAccountName: cd-jenkins
+  serviceAccountName: sa-cont-reg
   containers:
   - name: python
     image: python:latest
