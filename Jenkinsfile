@@ -54,7 +54,7 @@ spec:
           // Change deployed image in canary to the one we just built
           sh("sed -i.bak 's#gcr.io/cloud-solutions-images/gceme:1.0.0#${imageTag}#' ./k8s/canary/*.yaml")
           sh("kubectl --namespace=default apply -f k8s/services/frontend.yaml")
-          sh("kubectl --namespace=default apply -f k8s/canary/frontend-production.yaml")
+          sh("kubectl --namespace=default apply -f k8s/canary/frontend-canary.yaml")
           sh("echo http://`kubectl --namespace=default get service/${feSvcName} -o jsonpath='{.status.loadBalancer.ingress[0].ip}'` > ${feSvcName}")
         } 
       }
