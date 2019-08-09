@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: sample-gke-app-fe
-        image: gcr.io/cicd-spinakker/hello-la:latest
+        image: gcr.io/cloud-solutions-images/gceme:1.0.0
         resources:
           limits:
             memory: "500Mi"
