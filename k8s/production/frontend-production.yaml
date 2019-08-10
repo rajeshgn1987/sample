@@ -22,7 +22,7 @@ spec:
     metadata:
       name: frontend
       labels:
-        app: sample-gke-app
+        app: sample-app-rajesh
         role: frontend
         env: production
     spec:
