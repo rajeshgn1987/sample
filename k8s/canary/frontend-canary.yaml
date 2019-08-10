@@ -20,7 +20,7 @@ spec:
   replicas: 1
   template:
     metadata:
-      name: sample-app-rajesh
+      name: sample-gke-app
       labels:
         app: sample-gke-app
         role: frontend
