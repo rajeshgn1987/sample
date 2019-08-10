@@ -1,5 +1,5 @@
-def project = 'jenk-spina-demo'
-def  appName = 'gke-test'
+def project = 'jenkins-ci-249402'
+def  appName = 'gke-sample'
 def  feSvcName = "${appName}-frontend"
 def  imageTag = "gcr.io/${project}/${appName}:${env.BUILD_NUMBER}"
 
@@ -8,7 +8,7 @@ def  imageTag = "gcr.io/${project}/${appName}:${env.BUILD_NUMBER}"
 pipeline {
   agent {
     kubernetes {
-      label 'sample-app'
+      label 'sample-app-rajesh'
       defaultContainer 'jnlp'
       yaml """
 apiVersion: v1
