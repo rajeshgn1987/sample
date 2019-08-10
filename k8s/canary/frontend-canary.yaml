@@ -22,7 +22,7 @@ spec:
     metadata:
       name: sample-app-rajesh
       labels:
-        app: sample-gke-app
+        app: sample-app-rajesh
         role: frontend
         env: canary
     spec:
