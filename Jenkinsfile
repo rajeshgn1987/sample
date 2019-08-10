@@ -1,5 +1,5 @@
 def project = 'jenkins-ci-249402'
-def  appName = 'gke-jenkins-rajesh'
+def  appName = 'gke-sample'
 def  feSvcName = "${appName}-frontend"
 def  imageTag = "gcr.io/${project}/${appName}:${env.BUILD_NUMBER}"
 
