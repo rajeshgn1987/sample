@@ -1,4 +1,4 @@
-def project = 'jenkins-spinnaker-demo'
+def project = 'pg-jenk-spinnaker'
 def  appName = 'sample-app-rajesh'
 def  feSvcName = "${appName}-frontend"
 def  imageTag = "gcr.io/${project}/${appName}:${env.BUILD_NUMBER}"
