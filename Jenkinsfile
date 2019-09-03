@@ -50,7 +50,7 @@ spec:
         }
       }
     }
-    /*stage('Deploy Canary') {
+    stage('Deploy Canary') {
       // Canary branch
       /when { branch 'Canary' }
       steps {
@@ -95,6 +95,6 @@ spec:
           echo "Then access your service via http://localhost:8001/api/v1/proxy/namespaces/${env.BRANCH_NAME}/services/${feSvcName}:80/"
         }
       }     
-    }*/
+    }
   }
 }
