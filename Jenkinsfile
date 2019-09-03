@@ -1,5 +1,5 @@
 def project = 'rajesh-devops-secured'
-def appName = 'sample-app-rajesh'
+def  appName = 'sample-app-rajesh'
 def  feSvcName = "${appName}-frontend"
 def  imageTag = "gcr.io/${project}/${appName}:${env.BUILD_NUMBER}"
 
@@ -48,7 +48,7 @@ spec:
     }
     stage('Deploy Canary') {
       // Canary branch
-      /when { branch 'Canary' }
+      when { branch 'Canary' }
       steps {
         container('kubectl') {
           // Change deployed image in canary to the one we just built
