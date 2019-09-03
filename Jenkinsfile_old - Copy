@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-def project = 'rajesh-devops-secured'
-def  appName = 'gke-test'
-=======
-def project = 'rajesh-devops-secured'
+def project = 'pg-jenk-spinnaker'
 def  appName = 'sample-app-rajesh'
 def  feSvcName = "${appName}-frontend"
 def  imageTag = "gcr.io/${project}/${appName}:${env.BUILD_NUMBER}"
@@ -50,9 +46,9 @@ spec:
         }
       }
     }
-    /*stage('Deploy Canary') {
+    stage('Deploy Canary') {
       // Canary branch
-      /when { branch 'Canary' }
+      when { branch 'Canary' }
       steps {
         container('kubectl') {
           // Change deployed image in canary to the one we just built
@@ -95,6 +91,6 @@ spec:
           echo "Then access your service via http://localhost:8001/api/v1/proxy/namespaces/${env.BRANCH_NAME}/services/${feSvcName}:80/"
         }
       }     
-    }*/
+    }
   }
 }

@@ -15,19 +15,19 @@
 kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
-  name: sample-gke-app
+  name: sample-app-rajesh
 spec:
   replicas:
   template:
     metadata:
       name: frontend
       labels:
-        app: sample-gke-app
+        app: sample-app-rajesh
         role: frontend
         env: production
     spec:
       containers:
-      - name: sample-gke-app-fe
+      - name: sample-app-rajesh-fe
         image: gcr.io/cloud-solutions-images/gceme:1.0.0
         resources:
           limits:
