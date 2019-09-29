@@ -1,4 +1,4 @@
-def project = 'ultimate-choir-254202'
+def project = 'pd-cicd-demo'
 def  appName = 'sample-app-rajesh'
 def  feSvcName = "${appName}-frontend"
 def  imageTag = "gcr.io/${project}/${appName}:${env.BUILD_NUMBER}"
