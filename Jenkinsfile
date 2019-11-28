@@ -1,4 +1,4 @@
-def project = 'kubernetes-demo-01-253914'
+def project = 'pg-dubai-demo-281119'
 def  appName = 'sample-app-rajesh'
 def  feSvcName = "${appName}-frontend"
 def  imageTag = "gcr.io/${project}/${appName}:${env.BUILD_NUMBER}"
